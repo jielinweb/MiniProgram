@@ -1,0 +1,34 @@
+// 限制短评的显示数量
+var limit = function (array, length) {
+  return array.slice(0, length)
+}
+
+// 内容详情换行
+var format = function (text) {
+  if (!text) {
+    return
+  }
+
+  var reg = getRegExp('\\\\n', 'g')
+  var text = text.replace(reg, '\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+  return text
+}
+
+// 根据index选择对应的class
+var heightlight = function (index) {
+  if (index == 0) {
+    return 'ex-tag1'
+  }
+
+  if (index == 1) {
+    return 'ex-tag2'
+  }
+
+  return ''
+}
+
+module.exports = {
+  limit: limit,
+  format: format,
+  heightlight: heightlight
+}

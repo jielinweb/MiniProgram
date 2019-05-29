@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "wlike": "/components/like/like/",
+    "wepsolide": "/components/epsolide/index/",
+    "wmovie": "/components/classic/movie/index/",
+    "wessay": "/components/classic/essay/index/",
+    "wmusic": "/components/classic/music/index/",
+    "wnavi": "/components/navi/index/",
+    "wimagebtn": "/components/image-button/index"
+  }
+}

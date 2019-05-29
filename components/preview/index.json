@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wtag": "/components/tag/index",
+    "wlike": "/components/like/like"
+  }
+}

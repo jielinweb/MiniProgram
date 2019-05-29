@@ -1,0 +1,6 @@
+<!-- bind:getuserinfo用户点击该按钮时，会返回获取到的用户信息，回调的detail数据与wx.getUserInfo返回的一致，open-type="getUserInfo"时有效 -->
+<!-- open-type 微信开放能力 -->
+<!-- plain按钮是否镂空，背景色透明 -->
+<button bind:getuserinfo="onGetUserInfo" open-type="{{openType}}" plain="{{true}}" class="container">
+  <slot name="img"></slot>
+</button>

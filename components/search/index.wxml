@@ -1,0 +1,51 @@
+<view class="container">
+  <!-- 头部搜索框 -->
+  <view class="header">
+    <view class="search-container">
+      <image class="icon" src="images/search.png" />
+      <!-- auto-focus=true  自动获取输入框的焦点 -->
+      <input class="bar" placeholder-class="in-bar" placeholder="书籍名" bind:confirm="onConfirm" value="{{val}}" auto-focus="true" />
+      <image class="cancel-img" src="images/cancel.png" bind:tap="onDelete" />
+    </view>
+    <view class="cancel" bind:tap="onCancel">取消</view>
+  </view>
+
+  <view wx:if="{{!searching}}">
+    <!-- 历史搜索 -->
+    <view class="history">
+      <view class="title">
+        <view class="chunk"></view>
+        <text>历史搜索</text>
+      </view>
+      <view class="tags">
+        <!-- 绑定自定义搜索 -->
+        <block wx:for="{{historyWords}}" wx:key="item">
+          <wtag bind:tapping="onConfirm" class="tag" text="{{item}}" />
+        </block>
+      </view>
+    </view>
+    <!-- 热门搜索 -->
+    <view class="history hot-search">
+      <view class="title">
+        <view class="chunk"></view>
+        <text>热门搜索</text>
+      </view>
+      <view class="tags">
+        <block wx:for="{{hotKeys}}" wx:key="item">
+          <!-- 绑定自定义搜索 -->
+          <wtag bind:tapping="onConfirm" class="tag" text="{{item}}" />
+        </block>
+      </view>
+    </view>
+  </view>
+  <!-- 搜索结果列表 -->
+  <view class="books-container" wx:if="{{searching}}">
+    <block wx:for="{{bookData}}" wx:key="{{item.id}}">
+      <wbook class="book" book="{{item}}" show-like="{{false}}" />
+    </block>
+  </view>
+  <!-- 加载样式 -->
+  <wload class="loading" wx:if="{{loading}}"/>
+  <wload class="loading-center" wx:if="{{loadingCenter}}"/>
+  <text class="empty-tip" wx:if="{{noneResult}}">没有搜索到书籍</text>
+</view>

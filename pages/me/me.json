@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "wbutton": "/components/image-button/index",
+    "wpreview": "/components/preview/index"
+  }
+}
