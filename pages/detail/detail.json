@@ -2,6 +2,7 @@
   "usingComponents": {
     "wtag": "../../components/tag/index",
     "wlike": "/components/like/like/",
-    "wmask": "/components/mask/index/"
+    "wmask": "/components/mask/index/",
+    "wshare": "/components/image-button/index"
   }
 }

@@ -1,0 +1,9 @@
+<view class="container">
+  <block wx:for="{{dItem}}" wx:key="{{item.username}}">
+    <image class="avatar" src="{{item.avatar}}"></image>
+    <text class="motto">{{item.username}}</text>
+    <view class="journey-container" bindtap="toBarlist">
+      <text class="journey">开启小程序之旅</text>
+    </view>
+  </block>
+</view>

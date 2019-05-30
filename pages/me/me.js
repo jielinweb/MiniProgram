@@ -42,6 +42,7 @@ Page({
                 hasUserInfo: true,
                 userInfo: res.userInfo
               })
+              console.log(res)
             }
           })
         } else {
